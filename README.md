@@ -5,9 +5,9 @@ particle.js file => https://github.com/VincentGarreau/particles.js/
 other references => w3schools , stackoverflow ,Coderanch
 
 # screen shorts provided
-![home screen] (https://github.com/livinghumanz/transliteration-of-text-to-indian-languages-api/blob/master/screenclick/homescreen.png)
+![home screen](https://github.com/livinghumanz/transliteration-of-text-to-indian-languages-api/blob/master/screenclick/homescreen.png)
 home screen
-![translation screen] (https://github.com/livinghumanz/transliteration-of-text-to-indian-languages-api/blob/master/screenclick/translation_window.png)
+![translation screen](https://github.com/livinghumanz/transliteration-of-text-to-indian-languages-api/blob/master/screenclick/translation_window.png)
 translation window
 ![translating part](https://github.com/livinghumanz/transliteration-of-text-to-indian-languages-api/blob/master/screenclick/translation_process.png)
 translate text
