@@ -41,7 +41,7 @@ function hide()
     document.getElementById('id02').style.display='none';
   }
  // <!---------------------------------------driver script-------------------------------->
- //   <script> 
+ 
     $(document).ready(function() {
             $('#textarea').val("");
            });
@@ -67,11 +67,11 @@ function hide()
             str='';
     }).catch(err => console.error(err));
       }
-   //   </script> 
+   
   //<!-------------------------------------------------End driver script-------------------------------------->
  
   //<!----------------------------control script code------------------------------------------------------->                             
-  //<script>
+  
     var count=0;
     function fun()
     {
@@ -100,10 +100,10 @@ function hide()
 
   }
   //document.getElementById("demo").style.display="none";
- // </script>
+ 
 //<!---------------------------------------control script  End code-------------------------------->
 //<!---------------------------------------control script  for cookie session -------------------------------->
-//<script>
+
 var expDays = 30;	// set this value to however many days you want your cookies to last
 
 function setCookie(name, val)
@@ -142,5 +142,5 @@ i++
 return ""
 }
 
-//</script>
+
 //<!---------------------------------------control script  for cookie session end-------------------------------->
