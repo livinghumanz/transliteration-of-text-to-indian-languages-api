@@ -1,5 +1,7 @@
 # transliteration-of-text-to-indian-languages-api
 a front-end that will display the transliteration suggestions as the user types a word in English and allow them to choose one suggestion.(language is saved based on your previous choice (cookie))
+# website link : http://translate.rf.gd
+# api link :-https://cognireltech.github.io/Quillpad-Server/
 # source and references
 particle.js file => https://github.com/VincentGarreau/particles.js/
 other references => w3schools , stackoverflow ,Coderanch
