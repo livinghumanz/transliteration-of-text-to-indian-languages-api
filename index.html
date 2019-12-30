@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <title>TRANSLITERATION of english to indian language</title>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui. 
+  css"> 
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sample.css">
+    <script src="login.js"></script>
+   
+    <!---------------------------------------driver script------------------------------
+    <script> 
+    $(document).ready(function() {
+            $('#textarea').val("");
+            });
+  
+      function whenkeyup(url){
+        var valuegot,length=0,array=[],str='<select id="updatedir" onclick="func();" class="noborder" style="font-size:16pt;font-style: italic;width:100px;height:40px;" >';
+        fetch(url)
+        .then(res => res.json())
+        .then((out) => {
+            //console.log('Output: ', out.itrans);
+            var i;
+            length=(out.twords[0].options).length;
+            for(i=0;i<length;i++){
+              str=str+'<option value="';
+              str=str+out.twords[0].options[i]+'">'+out.twords[0].options[i]+'</option>';
+            //array.push(out.twords[0].options[i]);
+            //alert(array);
+            }
+            /*rray=[];*/
+            str+='</select>';
+            //alert(str);
+            fundo(str);
+            str='';
+    }).catch(err => console.error(err));
+      }
+      </script> 
+ ---------------------------------------------End driver script-------------------------------------->
+ 
+</head>
+<body>
+        <div class="container" id="cont">
+                <div class="topnav">
+                  <a href="#home">&lbbrk;&Lscr;&Hopf;&rbbrk;</a>
+                  
+                  <a href=#TRANSLITERATION onclick="document.getElementById('id01').style.display='block'" style="width:auto;">&#10098;TRANSLITERATION&#10099;</a>
+                  
+                </div>    
+                <div id="particles-js"> </div>
+                <script src="js/particles.js"></script>
+                <script src="js/app.js"></script>
+<!----------------------------LOGIN POPUP ----------------------------------------------------------->
+
+        <div id="id01" class="modal">
+  
+          <form  >
+            <div class="imgcontainer" >
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal" style="color: aliceblue;">&times;</span>
+            </div>
+        <div style="padding: 100px 0;">
+            <div class="container1" style="text-align: center; margin: auto;
+            width: 40%;
+            border: 3px solid #73AD21; vertical-align: middle;">
+            <textarea id="textarea" style="width: 100%; font-size: 16pt;" onclick="fun()" onkeyup="fun()" ></textarea>
+            <table>
+              <tr>
+              &nbsp;
+              <td><select id="selection" onChange="setCookie(this.name,this.selectedIndex)" >
+                <option value="gujarati">gujarati</option>
+                <option value="telugu">telugu</option>
+                <option value="tamil">tamil</option>
+                <option value="hindi" selected>hindi</option>
+                <option value="bengali">bengali</option>
+                <option value="marathi">marathi</option>
+                <option value="kannada">kannada</option>
+                <option value="malayalam">malayalam</option>
+                <option value="punjabi">punjabi</option>
+                <option value="nepali">nepali</option>
+              </select></td><td><div id="demo" style="color: aliceblue; " ></div></td></tr>
+              </table>
+              
+              
+            </div>
+        </div>
+        <center><p id="note" style="color: white;">IP address for the api used is not perminant <br>Refer : <a href="https://cognireltech.github.io/Quillpad-Server/" style="color: aqua; text-decoration: none;"> QuillPad server </a>&nbsp;github link:- <a href="https://github.com/livinghumanz/transliteration-of-text-to-indian-languages-api" style="color: aqua; text-decoration: none; font-size: 30px;"> --<i class="fa fa-github"  ></i>-- </a></p></center>
+            </form>
+        </div>  
+<!----------------------------END------------------------------------------------------->                             
+        </div>  
+        <!----------------------------control script code-----------------------------------------------------
+        <script>
+          var count=0;
+          function fun()
+          {
+              var lang=document.getElementById("selection").value;
+              var txtval=document.getElementById("textarea").value;
+              var atxtval=txtval.split(' ');
+              var length=atxtval.length;
+              var txtvalue=atxtval[length-1];
+              //alert(txtvalue);
+              var url="http://146.148.85.67/processWordJSON?inString="+txtvalue+"&lang="+lang;
+              var str=whenkeyup(url);
+              //return str;
+              //alert(url);
+          }
+
+        function fundo(str){
+        $(document).ready(function(){
+       
+               $('#demo').html(str);
+             // $('demo').show(2000);
+        });
+        }
+        function func(){
+        count=parseInt(count)+1;
+        if(parseInt(count)%2==0)
+        {
+        var nchar=document.getElementById("updatedir").value;
+        var tarea=document.getElementById("textarea");
+        var atxtaval=tarea.value.split(' ');
+        atxtaval[atxtaval.length-1]=nchar;
+        tarea.value=atxtaval.join(' ')+' ';
+       // document.getElementById("tags").value='';
+        $(document).ready(function(){
+       
+       $('#demo').html('');
+       tarea.focus();
+     // $('demo').show(2000);
+          });
+          
+        }
+
+        }
+        //document.getElementById("demo").style.display="none";
+        </script>
+-----------------------------------control script  End code-------------------------------->
+<!---------------------------------------control script  for cookie session ------------------------------
+<script>
+  var expDays = 30;	// set this value to however many days you want your cookies to last
+
+function setCookie(name, val)
+{
+ var exp = new Date()
+ var cookieTimeToLive = exp.getTime() + (expDays * 24 * 60 * 60 * 1000)
+ exp.setTime(cookieTimeToLive)
+ document.cookie = name + "=" + escape(val) + "; expires=" + exp.toGMTString()
+}
+
+function getCookie(name)
+{
+ var cookieNameLen = name.length
+ var cLen = document.cookie.length
+ var i = 0
+ var cEnd
+ var myStringToReturn
+ var myStringToReturnLen
+ while (i < cLen) 
+ {
+   var j = i + cookieNameLen
+   if (document.cookie.substring(i,j) == name)
+   {
+     cEnd = document.cookie.indexOf(";",j)
+     if (cEnd == -1)
+     {
+       cEnd = document.cookie.length
+     }
+     myStringToReturn = unescape(document.cookie.substring(j,cEnd))
+     myStringToReturnLen = myStringToReturn.length
+     myStringToReturn = myStringToReturn.substring(1,myStringToReturnLen+1)
+     return myStringToReturn
+   }
+   i++
+ }
+ return ""
+}
+
+</script>
+-------------------------------------control script  for cookie session end-------------------------------->
+</body>
+</html>
